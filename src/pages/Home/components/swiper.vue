@@ -20,6 +20,7 @@
     name: 'homeSwiper',
     data:function() {
         return {
+            
             swiperOption:{
                 loop:true,
                 pagination:'.swiper-pagination'
@@ -44,22 +45,29 @@
 
 <style lang="stylus" scoped>
 // 样式穿透
-.sw-wrapper >>>.swiper-pagination-bullet-active{
-    background: #fff !important;
+.sw-wrapper >>> .swiper-pagination-bullet-active {
+  background-color: #fff; 
 }
 
-
-.sw-wrapper{
-    width: 100%;
-    height: 0;
-    padding-bottom:26.67% ;
-    background-color: #eee;
+.sw-wrapper {
+  overflow: hidden;
+//   保持一个比例
+  width: 100%;
+  height: 0;
+  padding-bottom: 26.67%;
+  background-color: #eee;
 }
 
-.sw-wrapper .swiper-img{
-    width: 100%;
-    height: 100%;
+.swiper-pagination-fraction, .swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom:20px
 }
+
+.sw-wrapper .swiper-img {
+  width: 100%;
+  height: 100%;
+}
+
 
 
     
