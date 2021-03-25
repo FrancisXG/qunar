@@ -73,7 +73,14 @@ export default {
           id: 9,
           text: "旅游景点",
           iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        }
+        },
+        {
+          id: 10,
+          text: "旅游景点",
+          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+        },
+        
+
       ]
     };
   },
