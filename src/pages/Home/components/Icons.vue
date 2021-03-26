@@ -23,70 +23,15 @@
 <script>
 export default {
   name: "homeIcons",
+  props:{
+    "iconboxdata":Array
+  },
   data() {
     return {
       swiperOption: {
         pagination: ".swiper-pagination"
       },
-      iconboxdata: [
-        {
-          id: 1,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 2,
-          text: "旅游景点2",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 3,
-          text: "旅游景点3",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 4,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 5,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 6,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 7,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 8,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 9,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 10,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        {
-          id: 11,
-          text: "旅游景点",
-          iconUrl: "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
-        },
-        
-
-      ]
+      
     };
   },
   computed:{

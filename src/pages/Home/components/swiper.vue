@@ -1,9 +1,9 @@
 <!-- The ref attr used to find the swiper instance -->
 <template>
 <div class="sw-wrapper">
-  <swiper :options="swiperOption" ref="mySwiper">
+  <swiper :options="swiperOption" v-if="isSwiperShow">
     <!-- slides -->
-    <swiper-slide v-for="item in swiperList" :key="item.id">
+    <swiper-slide v-for="item in this.swiperList" :key="item.id">
         <img class="swiper-img":src="item.imgUrl" />
     </swiper-slide>
     
@@ -18,28 +18,24 @@
   // swiper options example:
   export default {
     name: 'homeSwiper',
+    props:{
+      "swiperList":Array
+    },
     data:function() {
         return {
-            
             swiperOption:{
                 loop:true,
                 pagination:'.swiper-pagination'
 
             },
-            swiperList:[{
-                id:'001',
-                imgUrl:'//imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg'
-            },
-            {
-                id:'002',
-                imgUrl:'//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg'
-            },
-            {
-                id:'003',
-                imgUrl:'//imgs.qunarzz.com/vs_ceph_vcimg/c0a60fa20379efa4f02ce527a680dc1b.jpeg'
-            }]
+           
         }
     },
+    computed:{
+      isSwiperShow:function(){
+        return this.swiperList.length
+      }
+    }
   }
 </script>
 

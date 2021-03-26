@@ -2,7 +2,7 @@
   <div>
   <div class="recommend-title">周末去哪儿</div>
   <ul>
-    <router-link  to="/detail" class="list-item" v-for="item in weekendList" :key="item.id" v-slot="{ navigate,href }" custom>
+    <router-link  to="/detail" class="list-item" v-for="item in this.weekendList" :key="item.id" v-slot="{ navigate,href }" custom>
     <li @click="navigate">
         <div class="item-img">
             <img :src="item.imgUrl" />
@@ -20,34 +20,12 @@
 <script>
 export default {
   name: "homeWeekend",
+  props:{
+    "weekendList":Array
+  },
   data:function() {
     return {
-      weekendList:[{
-        id:'001',
-        imgUrl:'//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg',
-        title:'长沙必打卡',
-        comment:'到了长沙，一定要到这些地方走走'
-
-      },
-      {
-        id:'002',
-        imgUrl:"//imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg",
-        title:'长沙必打卡',
-        comment:'到了长沙，一定要到这些地方走走'
-
-
-      },
-      {
-        id:'003',
-        imgUrl:"//imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg",
-        title:'长沙必打卡',
-        comment:'到了长沙，一定要到这些地方走走'
-
-
-      },
-     
-
-      ]
+      
     }
   },
 };
