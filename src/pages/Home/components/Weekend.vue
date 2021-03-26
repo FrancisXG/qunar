@@ -2,7 +2,7 @@
   <div>
   <div class="recommend-title">周末去哪儿</div>
   <ul>
-    <router-link  to="/detail" class="list-item" v-for="item in this.weekendList" :key="item.id" v-slot="{ navigate,href }" custom>
+    <router-link  to="/detail" class="list-item" v-for="item in weekendList" :key="item.id" v-slot="{ navigate,href }" custom>
     <li @click="navigate">
         <div class="item-img">
             <img :src="item.imgUrl" />

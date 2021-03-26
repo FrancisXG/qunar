@@ -2,7 +2,7 @@
   <div>
   <div class="recommend-title"><span class="iconfont r-icon">&#xe757</span>猜你喜欢</div>
   <ul>
-    <router-link  to="/detail" class="list-item" v-for="item in this.recommendList" :key="item.id" v-slot="{ navigate,href }" custom>
+    <router-link  to="/detail" class="list-item" v-for="item in recommendList" :key="item.id" v-slot="{ navigate,href }" custom>
     <li @click="navigate">
         <div class="item-img">
             <img :src="item.imgUrl" />
@@ -36,12 +36,51 @@
 <script>
 export default {
   name: "homeRecommend",
-  props:{
-    "recommendList":Array
-  },
   data:function() {
     return {
-      
+      recommendList:[{
+        id:'001',
+        imgUrl:"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+        tag:'可订今日',
+        title:'橘子洲',
+        commentNum:'2754',
+        price:'128',
+        district:'岳麓区'
+
+      },
+      {
+        id:'002',
+        imgUrl:"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+        tag:'可订今日',
+        title:'橘子洲',
+        commentNum:'2754',
+        price:'128',
+        district:'岳麓区'
+
+      },
+      {
+        id:'003',
+        imgUrl:"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+        tag:'可订今日',
+        title:'橘子洲',
+        commentNum:'2754',
+        price:'128',
+        district:'岳麓区'
+
+      },
+      {
+        id:'004',
+        imgUrl:"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+        tag:'可订今日',
+        title:'橘子洲',
+        commentNum:'2754',
+        price:'128',
+        district:'岳麓区'
+
+      },
+     
+
+      ]
     }
   },
 };

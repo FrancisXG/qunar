@@ -1,21 +1,10 @@
 <template>
-  <div class="list">
+  <div class="list" ref="listWrapper">
     <div>
-      <div class="hot-cities">
+      <div class="hot-cities" >
         <div class="hot-cts-title">热门城市</div>
         <ul class="clearfix">
-          <li class="border-top">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-top">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-top">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-top">北京</li>
-          <li class="border-topleft">北京</li>
-          <li class="border-topleft">北京</li>
+          <li v-for="item in computedCities" :class="item.borderType" :key="item.id">{{item.name}}</li>
           
           
         </ul>
@@ -23,64 +12,95 @@
         <div class="alphabet-menu">
           <div class="alphabet-menu-title">字母排序</div>
           <ul class="clearfix">
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
-           <li>A</li>
+           <li v-for="(item,index) in letters" :key="index" @click="handleLetterClick">{{item}}</li>
+           
           </ul>
         </div>
-        <div class="alphabet-list">
-          <div class="alphabet-list-title">A</div>
+       
+         <div class="alphabet-list" v-for="(item,key) in cities" :key="key" :ref="key">
+          <div class="alphabet-list-title">{{key}}</div>
           <ul class="clearfix">
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-            <li>阿拉尔</li>
-
+            <li v-for="innerItem in item" :key="innerItem.id">{{innerItem.name}}</li>
           </ul>
         </div>
+         
+        
     </div>
   </div>
 </template>
 
 <script>
+import BScroll from 'better-scroll'
+
 export default {
   name:'CityList',
+  props:{
+    cities:Object,
+    hotCities:Array
+  },
   data() {
     return {
-      alphabet:['A','B']
+      letter: ''
     }
   },
+  
+  
+  mounted:function(){
+    this.scroll = new BScroll(this.$refs.listWrapper,{
+			click: true
+		})
+  },
+
+  watch:{
+    letter:function(){
+      var elem = this.$refs[this.letter][0]
+      this.scroll.scrollToElement(elem)
+    }
+
+  },
+  updated:function(){
+    this.scroll.refresh()
+  },
+  methods:{
+    handleLetterClick:function(e){
+      this.letter = e.target.innerText
+    }
+  },
+
+  computed:{
+    letters:function(){
+      var letters = []
+      for(let i in this.cities){
+        letters.push(i)
+      }
+      return letters
+
+    },
+    computedCities:function(){
+      var result = [],
+            length = this.hotCities.length,item
+      for(let i = 0;i<length;i++){
+        var resObj={}
+        item = this.hotCities[i]
+        resObj.name = item.name
+        if(item.order===1){
+          resObj.borderType = ''
+        }
+        else if(item.order ===2 ||item.order===3){
+          resObj.borderType = 'border-left'
+        }else if(item.order%3===1){
+          resObj.borderType = 'border-top'
+        }
+        else{
+          resObj.borderType = 'border-topleft'
+        }
+        result.push(resObj)
+
+      }
+
+      return result
+    }
+  }
 }
 </script>
 
@@ -89,6 +109,7 @@ export default {
 
 div
   box-sizing:border-box
+  touch-action pan-y;
 
 .clearfix::after
   display block
@@ -102,6 +123,7 @@ div
   left 0
   right 0
   bottom 0
+  overflow hidden
 
 
 .hot-cities
@@ -131,7 +153,6 @@ div
   height .9rem
   text-align center 
   line-height .9rem
-  background skyblue
   box-sizing border-box
 
 .alphabet-menu ul 
