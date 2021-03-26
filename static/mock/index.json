@@ -1,0 +1,138 @@
+{
+  "ret":true,
+  "data":{
+    "city":"成都",
+    "swiperList":[{
+      "id":"001",
+      "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/79faa5a73731e84a7731db49d5baa91e.jpeg"
+  },
+  {
+      "id":"002",
+      "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg"
+  },
+  {
+      "id":"'003'",
+      "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/c0a60fa20379efa4f02ce527a680dc1b.jpeg'"
+  }],
+  "iconboxdata": [
+    {
+      "id": "1",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "2",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "3",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "4",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "5",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "6",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "7",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "8",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "9",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "10",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "11",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    },
+    {
+      "id": "12",
+      "text": "旅游景点",
+      "iconUrl": "//s.qunarzz.com/homenode/images/touchheader/hotel.png"
+    }
+  ],
+  "recommendList":[{
+    "id":"001",
+    "imgUrl":"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+    "tag":"可订今日",
+    "title":"橘子洲",
+    "commentNum":2754,
+    "price":128,
+    "district":"岳麓区"
+  },
+  {
+    "id":"002",
+    "imgUrl":"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+    "tag":"可订今日",
+    "title":"橘子洲",
+    "commentNum":2754,
+    "price":128,
+    "district":"岳麓区"
+  },
+  {
+    "id":"003",
+    "imgUrl":"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+    "tag":"可订今日",
+    "title":"橘子洲",
+    "commentNum":2754,
+    "price":128,
+    "district":"岳麓区"
+  },
+  {
+    "id":"004",
+    "imgUrl":"//imgs.qunarzz.com/p/p48/201302/28/bc44faa497db0dcf93835fbb.jpg_256x160_0ba13461.jpg",
+    "tag":"可订今日",
+    "title":"橘子洲",
+    "commentNum":2754,
+    "price":128,
+    "district":"岳麓区"
+  }],
+  "weekendList":[{
+    "id":"001",
+    "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg",
+    "title":"'长沙必打卡'",
+    "comment":"到了长沙，一定要到这些地方走走"
+
+  },
+  {
+    "id":"002",
+    "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg",
+    "title":"'长沙必打卡'",
+    "comment":"到了长沙，一定要到这些地方走走"
+
+  },
+  {
+    "id":"003",
+    "imgUrl":"//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg",
+    "title":"'长沙必打卡'",
+    "comment":"到了长沙，一定要到这些地方走走"
+
+  }]
+  }
+
+}

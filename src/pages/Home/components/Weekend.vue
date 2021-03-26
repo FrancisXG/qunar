@@ -2,7 +2,7 @@
   <div>
   <div class="recommend-title">周末去哪儿</div>
   <ul>
-    <router-link  to="/detail" class="list-item" v-for="item in recommendList" :key="item.id" v-slot="{ navigate,href }" custom>
+    <router-link  to="/detail" class="list-item" v-for="item in weekendList" :key="item.id" v-slot="{ navigate,href }" custom>
     <li @click="navigate">
         <div class="item-img">
             <img :src="item.imgUrl" />
@@ -22,7 +22,7 @@ export default {
   name: "homeWeekend",
   data:function() {
     return {
-      recommendList:[{
+      weekendList:[{
         id:'001',
         imgUrl:'//imgs.qunarzz.com/vs_ceph_vcimg/6ff121fd416169b8d56c60384e3baf79.jpeg',
         title:'长沙必打卡',
