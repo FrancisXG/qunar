@@ -8,9 +8,11 @@
             <span class="iconfont search-icon">&#xe632</span>
             <div class="i-text">输入城市/景点/游玩主题</div>
         </div>
+        <router-link to="/city">
         <div class="header-right">
             {{this.city}}
             <span class="iconfont search-icon">&#xe6aa</span></div>
+            </router-link>
     </div>
 </template>
 
@@ -55,6 +57,8 @@
         height 100%
         text-align center
         line-height 0.88rem
+        color #fff
+        
     }
 
     .header-input{
