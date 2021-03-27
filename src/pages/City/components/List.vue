@@ -4,7 +4,8 @@
       <div class="hot-cities" >
         <div class="hot-cts-title">热门城市</div>
         <ul class="clearfix">
-          <li v-for="item in computedCities" :class="item.borderType" :key="item.id">{{item.name}}</li>
+          <li v-for="item in computedCities" :class="item.borderType" :key="item.id"
+          @click="handleCityClick(item.name)">{{item.name}}</li>
           
           
         </ul>
@@ -20,7 +21,7 @@
          <div class="alphabet-list" v-for="(item,key) in cities" :key="key" :ref="key">
           <div class="alphabet-list-title">{{key}}</div>
           <ul class="clearfix">
-            <li v-for="innerItem in item" :key="innerItem.id">{{innerItem.name}}</li>
+            <li v-for="innerItem in item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">{{innerItem.name}}</li>
           </ul>
         </div>
          
@@ -31,6 +32,7 @@
 
 <script>
 import BScroll from 'better-scroll'
+import {mapMutations} from 'vuex'
 
 export default {
   name:'CityList',
@@ -64,7 +66,15 @@ export default {
   methods:{
     handleLetterClick:function(e){
       this.letter = e.target.innerText
-    }
+    },
+    handleCityClick:function(city){
+      // this.$store.commit('changeCityName',city)
+      this.changeCityName(city)
+      this.$router.push("/")
+    },
+    ...mapMutations({
+      changeCityName:'changeCityName'
+    })
   },
 
   computed:{
@@ -171,6 +181,7 @@ div
   width 25%
   height .9rem
   line-height .9rem
+  text-align center
 
 
 

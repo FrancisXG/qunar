@@ -10,19 +10,26 @@
         </div>
         <router-link to="/city">
         <div class="header-right">
-            {{this.city}}
+            {{this.namedCity}}
             <span class="iconfont search-icon">&#xe6aa</span></div>
             </router-link>
     </div>
 </template>
 
 <script>
+import {mapState,mapGetters} from 'vuex'
     export default {
         name: 'HomeHeader',
-        props:{
-            city:String
+        // 把商店里的state映射到组件里面
+        computed:{
+        ...mapState({
+            city:'city'
+        }),
+        ...mapGetters({
+            namedCity:'namedCity'
+        })
+        
         }
-
     }
 </script>
 
@@ -53,7 +60,8 @@
 
 
     .header .header-right {
-        width 1.32rem
+        min-width 1.12rem
+        padding 0 .12rem
         height 100%
         text-align center
         line-height 0.88rem
