@@ -10,14 +10,14 @@
         </div>
         <router-link to="/city">
         <div class="header-right">
-            {{this.namedCity}}
+            {{this.city}}
             <span class="iconfont search-icon">&#xe6aa</span></div>
             </router-link>
     </div>
 </template>
 
 <script>
-import {mapState,mapGetters} from 'vuex'
+import {mapState} from 'vuex'
     export default {
         name: 'HomeHeader',
         // 把商店里的state映射到组件里面
@@ -25,9 +25,7 @@ import {mapState,mapGetters} from 'vuex'
         ...mapState({
             city:'city'
         }),
-        ...mapGetters({
-            namedCity:'namedCity'
-        })
+        
         
         }
     }
