@@ -2,7 +2,7 @@
   <div>
   <div class="recommend-title"><span class="iconfont r-icon">&#xe757</span>猜你喜欢</div>
   <ul>
-    <router-link  to="/detail" class="list-item" v-for="item in recommendList" :key="item.id" v-slot="{ navigate,href }" custom>
+    <router-link  :to="'/detail/' + item.id" class="list-item" v-for="item in recommendList" :key="item.id" v-slot="{ navigate,href }" custom>
     <li @click="navigate">
         <div class="item-img">
             <img :src="item.imgUrl" />
