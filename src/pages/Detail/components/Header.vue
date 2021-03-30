@@ -63,6 +63,8 @@ export default {
   text-align center
   border-radius 0.4rem
   background-color rgba(0, 0, 0, 0.3)
+
+
 .header-back .icon-back
   color #fff
   font-size 0.4rem
@@ -78,6 +80,7 @@ export default {
   text-align center
   color #fff
   font-size .32rem
+  z-index 2
 
 .header .header-left
   display inline-block
