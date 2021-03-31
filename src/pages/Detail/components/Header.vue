@@ -42,12 +42,16 @@ export default {
       }
     }
   },
-  activated:function(){
+  mounted:function(){
     window.addEventListener('scroll',this.handlescroll)
-  },
-  deactivated() {
-    window.removeEventListener('scroll',this.handlescroll)
-  },
+  }
+  
+//   activated:function(){
+//     window.addEventListener('scroll',this.handlescroll)
+//   },
+//   deactivated() {
+//     window.removeEventListener('scroll',this.handlescroll)
+//   },
 };
 </script>
 

@@ -24,10 +24,15 @@ export default new Router({
       name: "Detail",
       component: Detail
     }
+
     // {
     //   path: "/gallery",
     //   name: "Gallery",
     //   component: Gallery
     // }
-  ]
+  ],
+  // 默认页面在顶端
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 };
+  }
 });

@@ -1,32 +1,34 @@
 <template>
   <div>
   <div class="banner" @click="handleBannerClick()">
-    <img class="banner-image" src="//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg" alt="">
+    <img class="banner-image" :src="bannerImage" >
     <div class="banner-info">
-      <div class="banner-number"><span class="iconfont icon-pic">&#xe60b</span>8</div>
-      <div class="banner-title">鼋头渚(AAAAA景区)</div>
+      <div class="banner-number"><span class="iconfont icon-pic">&#xe60b</span>{{this.galleryImages.length}}</div>
+      <div class="banner-title">{{this.sightName}}</div>
     </div>
 
   </div>
-      <common-gallery :imgslist="imgsList" v-show="isGalleryShow" @closeGallery="handleGalleryClose"></common-gallery>
+      <common-gallery :imgslist="galleryImages" v-show="isGalleryShow" @closeGallery="handleGalleryClose"></common-gallery>
 </div>
 </template>
 
 <script>
 import CommonGallery from "common/Gallery/Gallery";
 export default {
-  name: "Detail",
+  name: "Banner",
+  props:{
+    "sight-name":String,
+    "banner-image":String,
+    "galleryImages":Array
+
+  },
   components: {
     "common-gallery": CommonGallery
   },
   data: function() {
     return {
       isGalleryShow: false,
-      imgsList: [
-        "//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg",
-        "//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg",
-        "//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg"
-      ]
+    
     };
   },
   methods: {
@@ -34,7 +36,6 @@ export default {
       this.isGalleryShow = true;
     },
     handleGalleryClose: function() {
-      console.log(1);
       this.isGalleryShow = false;
     }
   }

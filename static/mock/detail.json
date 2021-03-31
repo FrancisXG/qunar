@@ -1,0 +1,28 @@
+{
+  "ret":true,
+  "data":{
+    "sightName":"峨眉山（AAAAA景区）",
+    "bannerImage":"//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg",
+    "galleryImage":["//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg",
+      "//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg",
+      "//img1.qunarzz.com/sight/p0/2003/6c/6cd013b870474899a3.img.jpg_256x160_a87371da.jpg"],
+    "categoryList":[{
+      "title":"金顶索道",
+      "children":[{
+      "title":"峨眉山金顶索道票（下行）",
+      "children":[{
+        "title":"乘坐线路：起于金顶，止于接引殿"
+      }]
+    },{
+      "title":"峨眉山金顶索道票（上行）"
+    }]
+  },{
+    "title":"万年寺索道"
+  },{
+    "title":"观光车"
+  },{
+    "title":"景区直通车"
+  }]
+
+  }
+}
