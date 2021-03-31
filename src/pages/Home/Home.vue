@@ -65,6 +65,9 @@ export default {
 
  },
  activated:function(){
+   window.addEventListener("beforeunload",function(){
+     window.scrollTo(0,0)
+   })
    if(this.lastCity!==this.curcity){
      this.lastCity = this.curcity
      this.getHomeInfo()

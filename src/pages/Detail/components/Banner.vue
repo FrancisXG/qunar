@@ -8,12 +8,15 @@
     </div>
 
   </div>
+      <common-fade>
       <common-gallery :imgslist="galleryImages" v-show="isGalleryShow" @closeGallery="handleGalleryClose"></common-gallery>
+      </common-fade>
 </div>
 </template>
 
 <script>
 import CommonGallery from "common/Gallery/Gallery";
+import CommonFade from "common/fade/fade";
 export default {
   name: "Banner",
   props:{
@@ -23,7 +26,8 @@ export default {
 
   },
   components: {
-    "common-gallery": CommonGallery
+    "common-gallery": CommonGallery,
+    "common-fade": CommonFade
   },
   data: function() {
     return {
